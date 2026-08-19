@@ -10,3 +10,4 @@ const edad = añoActual - nacimiento;
 
 alert ("Hola " + nombre + " " + apellido + " tienes " + edad + " años");
 
+//hola
