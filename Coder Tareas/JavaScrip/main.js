@@ -48,4 +48,3 @@ const mayordeedad = 18;
 const edadesMinimas = { comedia, accion, terror };
 verificarIngreso(pelicula, edadesMinimas[pelicula], edad);
 
-//Hola como andas //
