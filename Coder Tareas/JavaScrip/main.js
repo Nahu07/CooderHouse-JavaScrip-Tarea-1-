@@ -8,7 +8,7 @@ const terror = 18;
 /*Realizar un loop para condicionar al usario a colocar alguna de las 3 categorias validas */
 
 let pelicula = prompt("Ingrese el tipo de pelicula que desea ver: comedia, accion o terror: ").toLowerCase();
-
+function Tipopelicula (){
 while (pelicula !== "comedia" && pelicula !== "accion" && pelicula !== "terror"){
     
     alert("Ingrese alguna de las categorias validas: comedia, accion o terror");
@@ -17,10 +17,12 @@ while (pelicula !== "comedia" && pelicula !== "accion" && pelicula !== "terror")
 
     if (pelicula === "comedia" || pelicula === "accion" || pelicula === "terror"){
         break
-
     }
 
     }
+}
+
+Tipopelicula();   
 let edad = parseInt(prompt("Ingrese su edad: "));
 const mayordeedad = 18;
 
