@@ -46,7 +46,7 @@ let pelicula = prompt("Ingrese el tipo de pelicula que desea ver: comedia, accio
 
 Tipopelicula();   
 
-let edad = parseInt(prompt("Ingrese su edad: "));
+let edad = parseInt(prompt("Ingrese su edad:"));
 
 const mayordeedad = 18;
 
