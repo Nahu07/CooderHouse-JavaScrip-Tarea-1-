@@ -5,11 +5,7 @@ while (pelicula !== "comedia" && pelicula !== "accion" && pelicula !== "terror")
 
     pelicula = prompt("Ingrese el tipo de pelicula que desea ver: comedia, accion o terror: ").toLowerCase();
 
-    if (pelicula === "comedia" || pelicula === "accion" || pelicula === "terror"){
-        
-    }
-
-    }
+}
 }
 function verificarIngreso(categoria, edadMinima, edad) {
     if (edad >= edadMinima) {
@@ -43,9 +39,10 @@ const terror = 18;
 
 let pelicula = prompt("Ingrese el tipo de pelicula que desea ver: comedia, accion o terror: ").toLowerCase();
 
-
 Tipopelicula();   
+
 let edad = parseInt(prompt("Ingrese su edad: "));
+
 const mayordeedad = 18;
 
 const edadesMinimas = { comedia, accion, terror };
