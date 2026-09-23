@@ -35,10 +35,6 @@ function verificarIngreso(categoria, edadMinima, edad) {
     
 }
 
-
-
-
-
 alert("Bienvenido al cine las peliculas se dividen en clasificaciones de edad, comedia 14+, accion 16+ y terror 18+ en el caso de que seas menor para alguna categoria deberas ingresar con algun mayor");
 
 const comedia = 14;
