@@ -5,6 +5,8 @@ while (pelicula !== "comedia" && pelicula !== "accion" && pelicula !== "terror")
 
     pelicula = prompt("Ingrese el tipo de pelicula que desea ver: comedia, accion o terror: ").toLowerCase();
 
+    return pelicula;
+
 }
 }
 function verificarIngreso(categoria, edadMinima, edad) {
@@ -21,14 +23,17 @@ function verificarIngreso(categoria, edadMinima, edad) {
         const edadAcompanado = parseInt(prompt("Ingrese la edad del mayor de edad: "));
         if (edadAcompanado >= edadMinima){
             alert(`Puede ingresar a la sala ${categoria}`)
-    }
+             
+        }
+    
     else{
         alert(`No puede ingresar a la sala ${categoria}`)
     }
     
 }
-    }
-    
+        
+    } 
+   
 }
 
 alert("Bienvenido al cine las peliculas se dividen en clasificaciones de edad, comedia 14+, accion 16+ y terror 18+ en el caso de que seas menor para alguna categoria deberas ingresar con algun mayor");
@@ -47,4 +52,6 @@ const mayordeedad = 18;
 
 const edadesMinimas = { comedia, accion, terror };
 verificarIngreso(pelicula, edadesMinimas[pelicula], edad);
+
+alert(`El usuario ingreso a la sala de ${pelicula} con edad ${edad} acompanado ${acompanado}`);
 
