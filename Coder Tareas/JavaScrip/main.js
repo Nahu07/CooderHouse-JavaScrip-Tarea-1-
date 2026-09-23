@@ -55,3 +55,4 @@ verificarIngreso(pelicula, edadesMinimas[pelicula], edad);
 
 alert(`El usuario ingreso a la sala de ${pelicula} con edad ${edad} acompanado ${acompanado}`);
 
+//Hola 
