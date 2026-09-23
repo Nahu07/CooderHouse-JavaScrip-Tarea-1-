@@ -16,7 +16,7 @@ while (pelicula !== "comedia" && pelicula !== "accion" && pelicula !== "terror")
     pelicula = prompt("Ingrese el tipo de pelicula que desea ver: comedia, accion o terror: ").toLowerCase();
 
     if (pelicula === "comedia" || pelicula === "accion" || pelicula === "terror"){
-        break
+        
     }
 
     }
@@ -26,7 +26,7 @@ Tipopelicula();
 let edad = parseInt(prompt("Ingrese su edad: "));
 const mayordeedad = 18;
 
-if (pelicula === "comedia") {
+/*if (pelicula === "comedia") {
     if (edad >= comedia) {
         alert("Puede ingresar a la sala de comedia");
     } else {
@@ -72,4 +72,25 @@ if (pelicula === "comedia") {
         }
     }
  }
+}*/
+function verificarIngreso(categoria, edadMinima, edad) {
+    let puedeIngresar = edad >= edadMinima;
+
+    if (puedeIngresar) {
+        const acompanado = prompt("¿Viene acompañado de un mayor de edad? (si/no)").toLowerCase();
+
+        if (acompanado === "si") {
+            const edadAcompanado = parseInt(prompt("Ingrese la edad del mayor de edad: "));
+            puedeIngresar = edadAcompanado >= mayordeedad;
+        }
+    }
+
+    if (puedeIngresar) {
+        alert(`Puede ingresar a la sala de ${categoria}`);
+    } else {
+        alert(`No puede ingresar a la sala de ${categoria}`);
+    }
 }
+
+const edadesMinimas = { comedia, accion, terror };
+verificarIngreso(pelicula, edadesMinimas[pelicula], edad);
