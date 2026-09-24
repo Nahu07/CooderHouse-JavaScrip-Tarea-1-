@@ -1,3 +1,15 @@
+const edadminima = (pelicula) =>{
+    if (pelicula === "comedia" ){
+        return 14;
+    } else if (pelicula === "accion"){
+        return 16;
+    }else if (pelicula === "terror"){
+        return 18;
+    }
+    
+} 
+
+
 function Tipopelicula (){
 while (pelicula !== "comedia" && pelicula !== "accion" && pelicula !== "terror"){
     
@@ -9,8 +21,8 @@ while (pelicula !== "comedia" && pelicula !== "accion" && pelicula !== "terror")
 
 }
 }
-function verificarIngreso(categoria, edadMinima, edad) {
-    if (edad >= edadMinima) {
+function verificarIngreso(categoria, edadesMinimas, edad) {
+    if (edad >= edadesMinimas) {
         alert(`Puede ingresar a la sala de ${categoria}`);
     }
     else {
@@ -21,7 +33,7 @@ function verificarIngreso(categoria, edadMinima, edad) {
     
         if (acompanado === "si") {
         const edadAcompanado = parseInt(prompt("Ingrese la edad del mayor de edad: "));
-        if (edadAcompanado >= edadMinima){
+        if (edadAcompanado >= edadesMinimas){
             alert(`Puede ingresar a la sala ${categoria}`)
              
         }
@@ -36,15 +48,18 @@ function verificarIngreso(categoria, edadMinima, edad) {
    
 }
 
-const flecha = () => ;
+
 
 alert("Bienvenido al cine las peliculas se dividen en clasificaciones de edad, comedia 14+, accion 16+ y terror 18+ en el caso de que seas menor para alguna categoria deberas ingresar con algun mayor");
 
-const comedia = 14;
-const accion = 16;
-const terror = 18;
-
 let pelicula = prompt("Ingrese el tipo de pelicula que desea ver: comedia, accion o terror: ").toLowerCase();
+
+
+const edadesMinimas = edadminima (pelicula);
+/*const comedia = 14;
+const accion = 16;
+const terror = 18;*/
+
 
 Tipopelicula();   
 
@@ -52,8 +67,8 @@ let edad = parseInt(prompt("Ingrese su edad:"));
 
 const mayordeedad = 18;
 
-const edadesMinimas = { comedia, accion, terror };
-verificarIngreso(pelicula, edadesMinimas[pelicula], edad);
+//const edadesMinimas = { comedia, accion, terror };
 
-alert(`El usuario ingreso a la sala de ${pelicula} con edad ${edad} acompanado ${acompanado}`);
+verificarIngreso(pelicula, edadesMinimas , edad);
+
 
