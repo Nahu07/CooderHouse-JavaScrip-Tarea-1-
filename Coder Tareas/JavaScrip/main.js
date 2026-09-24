@@ -54,10 +54,11 @@ alert("Bienvenido al cine las peliculas se dividen en clasificaciones de edad, c
 
 let pelicula = prompt("Ingrese el tipo de pelicula que desea ver: comedia, accion o terror: ").toLowerCase();
 
+
+Tipopelicula(pelicula); 
+
 const edadesMinimas = edadminima (pelicula);
-
-
-Tipopelicula(pelicula);   
+  
 
 let edad = parseInt(prompt("Ingrese su edad:"));
 
