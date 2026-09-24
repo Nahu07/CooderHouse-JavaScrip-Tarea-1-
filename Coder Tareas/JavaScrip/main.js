@@ -10,7 +10,7 @@ const edadminima = (pelicula) =>{
 } 
 
 
-function Tipopelicula (){
+function Tipopelicula (pelicula){
 while (pelicula !== "comedia" && pelicula !== "accion" && pelicula !== "terror"){
     
     alert("Ingrese alguna de las categorias validas: comedia, accion o terror");
@@ -57,7 +57,7 @@ let pelicula = prompt("Ingrese el tipo de pelicula que desea ver: comedia, accio
 const edadesMinimas = edadminima (pelicula);
 
 
-Tipopelicula();   
+Tipopelicula(pelicula);   
 
 let edad = parseInt(prompt("Ingrese su edad:"));
 
