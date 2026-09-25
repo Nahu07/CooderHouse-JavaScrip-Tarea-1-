@@ -76,3 +76,4 @@ let edad = parseInt(prompt("Ingrese su edad:"));
 verificarIngreso(pelicula, edadesMinimas , edad);
 
 
+//Recuerda correguir la validacion de los numeros con Number.isNaN, que verificar ingreso retorne booleans//
