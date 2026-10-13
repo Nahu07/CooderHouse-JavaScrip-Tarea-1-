@@ -59,6 +59,10 @@ function verificarIngreso(categoria, edadesMinimas, edad) {
 alert("Bienvenido al cine las peliculas se dividen en clasificaciones de edad, comedia 14+, accion 16+ y terror 18+ en el caso de que seas menor para alguna categoria deberas ingresar con algun mayor");
 console.log("Bienvenido al cine las peliculas se dividen en clasificaciones de edad, comedia 14+, accion 16+ y terror 18+ en el caso de que seas menor para alguna categoria deberas ingresar con algun mayor");
 
+/*const combos=["premium","grande","mediano"];
+const descipcioncombos=["Pochoclos grandes + gaseosa + nachos","Pochoclos grandes + gaseosa grande","Pochoclos mediano + gaseosa"];
+*/
+
 let pelicula = prompt("Ingrese el tipo de pelicula que desea ver: comedia, accion o terror: ").toLowerCase();
 
 
@@ -75,5 +79,8 @@ let edad = parseInt(prompt("Ingrese su edad:"));
 
 verificarIngreso(pelicula, edadesMinimas , edad);
 
+/*alert("Le gustaria agrega un combo (si/no)");
+*/
 
 //Recuerda correguir la validacion de los numeros con Number.isNaN, que verificar ingreso retorne booleans//
+
