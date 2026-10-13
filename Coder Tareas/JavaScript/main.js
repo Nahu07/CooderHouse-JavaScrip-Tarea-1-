@@ -40,12 +40,15 @@ function verificarIngreso(categoria, edadesMinimas, edad) {
         if (edadAcompanado >= 18){
             alert(`Puede ingresar a la sala ${categoria}`)
             console.log(`Puede ingresar a la sala ${categoria}`);
-             
+            
+            return true;
         }
+       
     
     else{
         alert(`No puede ingresar a la sala ${categoria}`)
         console.log(`No puede ingresar a la sala ${categoria}`);
+        return false
     }
     
 }
@@ -59,9 +62,9 @@ function verificarIngreso(categoria, edadesMinimas, edad) {
 alert("Bienvenido al cine las peliculas se dividen en clasificaciones de edad, comedia 14+, accion 16+ y terror 18+ en el caso de que seas menor para alguna categoria deberas ingresar con algun mayor");
 console.log("Bienvenido al cine las peliculas se dividen en clasificaciones de edad, comedia 14+, accion 16+ y terror 18+ en el caso de que seas menor para alguna categoria deberas ingresar con algun mayor");
 
-/*const combos=["premium","grande","mediano"];
+const combos=["Premium","Grande","Mediano"];
 const descipcioncombos=["Pochoclos grandes + gaseosa + nachos","Pochoclos grandes + gaseosa grande","Pochoclos mediano + gaseosa"];
-*/
+
 
 let pelicula = prompt("Ingrese el tipo de pelicula que desea ver: comedia, accion o terror: ").toLowerCase();
 
@@ -79,8 +82,51 @@ let edad = parseInt(prompt("Ingrese su edad:"));
 
 verificarIngreso(pelicula, edadesMinimas , edad);
 
-/*alert("Le gustaria agrega un combo (si/no)");
-*/
+
+
+
+let comboElegido = "Ninguno";
+let descripcionElegida = "Sin combo";
+if (verificarIngreso === true) {
+ const quierecombo = confirm("Le gustaria agrega un combo")
+}
+else{
+
+};
+if(quierecombo===true){
+    const eleccion = prompt("¿Que combo le gustaria elegir?\n"+"1.Premium\n"+"2.Grande\n" +"3.Mediano");
+    switch(eleccion){
+    case "1":
+        comboElegido = combos [0];
+        descripcionElegida = descipcioncombos [0];
+        break;
+
+            case "2":
+        comboElegido = combos [1];
+        descripcionElegida = descipcioncombos [1];
+        break;
+
+    case "3":
+        comboElegido = combos [2];
+        descripcionElegida = descipcioncombos [2];
+        break;
+
+    default:
+        alert("La opción ingresada no es válida.");
+        break;
+}
+
+}
+
+
+else{
+    alert ("Que difrute su funcion");
+}
+alert("Combo elegido: " + comboElegido + "\nDescripcion:" + descripcionElegida);
+
+
+console.log("Combo elegido " + comboElegido);
+console.log("Descripcion " + descripcionElegida);
 
 //Recuerda correguir la validacion de los numeros con Number.isNaN, que verificar ingreso retorne booleans//
 
