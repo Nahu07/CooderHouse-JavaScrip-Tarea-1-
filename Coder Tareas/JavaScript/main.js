@@ -83,16 +83,16 @@ let edad = parseInt(prompt("Ingrese su edad:"));
 verificarIngreso(pelicula, edadesMinimas , edad);
 
 
-
+const quierecombo = confirm("Le gustaria agrega un combo")
 
 let comboElegido = "Ninguno";
 let descripcionElegida = "Sin combo";
 if (verificarIngreso === true) {
- const quierecombo = confirm("Le gustaria agrega un combo")
-}
-else{
 
-};
+
+
+    
+}
 if(quierecombo===true){
     const eleccion = prompt("¿Que combo le gustaria elegir?\n"+"1.Premium\n"+"2.Grande\n" +"3.Mediano");
     switch(eleccion){
